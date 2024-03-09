@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="feedbackstyle.css">
+    <title>FitFlow: Customized Workout Routines & Exercise</title>
+</head>
+<body>
+    <nav id="main-nav">
+        <ion-icon name="menu-outline" id="burger-icon"></ion-icon>
+        <ion-icon name="close-outline" id="close-icon"></ion-icon>
+        <ul id="opening-nav">
+            <li><a href="../Home_Tab/index.html" class="home-design">HOME</a></li>
+            <li><a href="../About_Tab/index.html" class="about-design">ABOUT</a></li>
+            <li><a href="../Feedback_Tab/index.html" class="fb-design">FEEDBACK</a></li>
+            <li><a href="../Contact_Tab/index.html" class="contact-design">CONTACT US</a></li>
+        </ul>
+
+        <h2>FitFlow</h2>
+    </nav>
+    <main>
+
+        <div class="container">
+            <div class="wrapper">
+                <form method="POST" action="#">
+                    <div class="form-container">
+                        <h1>Let us know your Feedback!</h1>
+                        <div>
+                            <label for="name">Name: </label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <label for="email">Email: </label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div>
+                            <label for="subject">Subject: </label>
+                            <input type="text" name="subject" id="subject" placeholder="What is the Subject" required>
+                        </div>
+                        <div>
+                            <label for="feedback">Feedback: </label>
+                            <textarea name="feedback" id="feedback" cols="30" rows="10" required></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" name="submit" id="submit" value="SUBMIT">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="feedbackjs.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>

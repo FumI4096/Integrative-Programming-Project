@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlow Register</title>
+    <link rel="stylesheet" href="regstyle.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <form method="POST" action="#">
+                <div class="form-container">
+                    <h1>Register</h1>
+                    <div class="EMAIL">
+                            <label for="email">Email: </label>
+                            <input type="text" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="PASS">
+                        <label for="password">Password: </label>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <ion-icon name="eye-outline" id="eye-password"></ion-icon>
+                    </div>
+                    <div class="icons">
+                        <div class="or-design">
+                            <hr>
+                            <p>OR</p>
+                            <hr>
+                                
+                        </div>
+                        <div class="icon-structure">
+                            <div class="icon-design">
+                                <ion-icon name="logo-google"></ion-icon>
+                            </div>
+                            <div class="icon-design">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="SUBMIT">
+                        <p id="pop-sign">Thank you for Signing Up!</p>
+                        <input type="button" name="submit" id="submit1" value="Sign Up">
+                        <input type="button" name="submit" id="submit2" value="Back to Login">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="regscript.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

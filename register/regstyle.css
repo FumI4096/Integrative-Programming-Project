@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&family=Prompt:ital,wght@0,600;0,700;1,500;1,600;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body{
+    background-image: url(../pictures/login-background.jpg);
+    height: 919px;
+}
+
+main{
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+form .form-container{
+    width: 500px;
+    height: 600px;
+    background-color: rgba(4, 26, 4, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1.5rem;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    border: 2px solid white;
+    position: relative;
+}
+
+.EMAIL, .PASS, .SUBMIT{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+form .form-container h1{
+    font-family: 'Prompt', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-style: italic;
+    color: #ffffff;    
+    font-size: 2rem;
+    filter: drop-shadow(0px 2px 2px black);
+    position: absolute;
+    top: -2.5rem;
+}
+
+label[for="email"], label[for="password"]{
+    align-self: flex-start;
+    color: white;
+}
+
+input{
+    width: 20rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    /* border: solid white 1px;*/
+    /* border-radius: 100px;  */
+    border-bottom: 2px solid white;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    padding: 0;
+    margin-bottom: 1px;
+}
+
+#submit1, #submit2{
+    color: white;
+    width: 15rem;
+    height: 3rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border: solid white 2px;
+    border-radius: 100px;
+    transition: 0.2s;
+}
+
+#submit1:hover, #submit2:hover{
+    border: solid rgb(219, 219, 219) 2px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    
+}
+
+
+#submit1:active, #submit2:active{
+    color: rgba(0, 0, 0, 0.253);
+    cursor: pointer;
+}
+
+.PASS{
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+a:hover{
+    color: rgb(231, 231, 231);
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 3rem;
+}
+
+.or-design{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.or-design hr{
+    width: 100px;
+    margin: 0 20px;
+}
+
+.icon-structure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-design{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(69, 121, 77);
+    width: 60px;
+    border-radius: 100%;
+}
+
+ion-icon{
+    font-size: 2.3rem;
+}
+
+.icon-design:hover{
+    background: rgb(59, 104, 66);
+}
+
+.icon-design:active{
+    background: rgb(51, 90, 57);
+}
+
+#eye-password{
+    font-size: 1.3rem;
+    position: absolute;
+    right: 2px;
+    bottom: 7px;
+    cursor: pointer;
+}
+
+.SUBMIT p{
+    visibility: hidden;
+}
+
+@media (max-width: 767px){
+    html{
+        height: 100%;
+        overflow: hidden;
+    }
+    body{
+        height: 100%;
+        background-attachment: fixed;
+        background-position-x: 1000px ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    main{
+        height: 100%;
+        width: 90%;
+        /* padding: 1.75rem; */
+    }
+
+    form{
+        height: 60%;    
+        width: 100%;
+    }
+    
+    form .form-container{
+        height: auto;
+        width: auto;
+        padding: 1.75rem;
+        
+    }
+
+    .container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons{
+        margin: 0;
+    }
+
+    .EMAIL, .PASS, .SUBMIT, .icons, input{
+        width: 100%;
+    }
+}

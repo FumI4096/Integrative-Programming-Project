@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&family=Prompt:ital,wght@0,600;0,700;1,500;1,600;1,700&display=swap');
+
+*{
+    color: white;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body{
+    background-image: url(../pictures/fb-background2.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 90px;
+    background-size: cover;
+    height: 825px;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+nav h2{
+    font-family: 'Prompt', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-style: italic;
+    padding: 1px 0 0 0;
+    margin-right: 5rem;
+    color: #ffffff;    
+    font-size: 3rem;
+    position: relative;
+    filter: drop-shadow(5px 5px 3px black);
+}
+
+nav {
+    height: 5.9rem;
+    padding: 0 1.8rem;
+    background-image:  linear-gradient(to bottom right, rgb(46, 56, 52) 30%, rgb(46, 56, 52) 40%, rgb(46, 63, 46) 90%, rgb(44, 71, 44));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+
+nav ul li a{
+    font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 100;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    padding: 2.25rem 2.5rem;
+}
+
+
+nav ul li a::after{
+    content: "";
+    background-color: #387240;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 2.5rem;
+    bottom: 2.25rem;
+    transition: 0.3s;
+}   
+
+
+.about-design:hover, .home-design:hover, .home-design:hover{
+    transition: 0.1s;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+.about-design:active, .home-design:active, .home-design:active{
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+
+}
+nav ul li a:active{
+    color:#38693e93;
+}
+
+nav ul li a:hover::after{
+    width: 20%;
+}
+
+#burger-icon, #close-icon{
+    font-size: 3rem;
+    display: none;
+    color: white;
+}
+
+.contact-design{
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    border-bottom: 2px solid #45a55a;
+}
+
+.home-design:hover, .about-design:hover, .fb-design:hover{
+    transition: 0.1s;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+.home-design:active, .about-design:active, .fb-design:active{
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+
+}
+
+nav ul li a:active{
+    color:#38693e93;
+}
+
+.structure-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10rem;
+    flex-wrap: wrap;
+}
+
+.icon-container{
+    height: 84px;
+    width: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    box-shadow: 0px 6px 4px black;
+}
+
+ion-icon{
+    font-size: 2.4rem;
+    color: black;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    padding: 2rem;
+}
+
+main h1{
+    position: absolute;
+    bottom: 5rem;
+    text-shadow: 5px 5px 3px black;
+    font-style: italic;
+    font-size: 3rem;
+    font-weight: bold;
+    top: 6rem;
+}
+
+.card{
+    height: auto;
+    width: 400px;
+    background-image: linear-gradient(to bottom right, rgba(27, 54, 30, 0.7), rgba(44, 92, 50, 0.7));
+    backdrop-filter:blur(6px);
+    padding: 1.6rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    position: relative;
+    gap: 2rem;
+    border: 2px rgb(224, 224, 224) solid;
+    box-shadow: 20px 20px 20px black;
+}
+
+.social-list li .social-design ion-icon{
+    font-size: 2rem;
+    color: white;
+}
+
+.social-list li .social-design{
+    height: 60px;
+    width: 60px;
+    background-color: #387240;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    transition: 0.1s;
+}
+
+.social-list li .social-design:hover, #chat-now:hover{
+    background-color: #35683d;
+}
+
+#chat-now{
+    height: 50px;
+    width: 120px;
+    background-color: #387240;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+#phrase1{
+    /* margin-top: 3.5rem; */
+    text-shadow: 4px 4px 3px black;
+}
+
+#phrase2, #phrase3{
+    /* margin-top: 4.9rem; */
+    text-shadow: 4px 4px 3px black;
+}
+
+#number{
+    text-decoration: underline;
+}
+
+#chat-now, .social-design{
+    box-shadow: 5px 5px 5px black;
+}
+
+#chat-now:active, .social-list li .social-design:active{
+    background-color: #27502d;;
+}
+
+.title-container{
+    /* background-color: #000000; */
+    min-height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-list, #number, #contain-chat{
+    /* background-color: #000000; */
+    min-height: 70px;
+    width: 250px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.6rem;
+}   
+
+@media (max-width: 1583px){
+    body{
+        height: 824px;
+    }
+    main{
+        height: 100%;
+        gap: 2rem;
+    }
+    .structure-card{
+        row-gap: 2.5rem;
+        column-gap: 2.5rem;
+    }
+    main h1{
+        font-size: clamp(2.7rem, 2.9vw, 3rem);
+        position: static;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1349px){
+    nav ul{
+        padding: 0;
+    }
+
+    nav h2{
+        margin-right: 1rem;
+    }
+}
+
+/* @media (max-width: 1583px){
+    body{
+        height: 824px;
+    }
+    main{
+        height: 100%;
+    }
+} */
+
+@media (max-width: 1199px){
+    nav{
+        padding: 0;
+        position: sticky;
+        top: 0;
+        flex-direction: row-reverse;
+        padding: 0 0 0 1rem;
+        z-index: 1000
+    }
+
+    nav ul{
+        padding: 0;
+        position: absolute;
+        flex-direction: column;
+        top: 5.9rem;
+        background-color:rgb(101, 138, 101);
+        width: 100%;
+        height: 22rem;
+        max-width: 100%;
+        visibility: hidden;
+    }
+
+    nav h2 span{
+        margin: 0;
+    }
+
+    nav h2{
+        margin-left: 20px;
+        font-size: clamp(2rem, 3vw, 3.2rem);
+    }
+
+    main section h1{
+        text-align: center;
+        font-size: 2.7rem;
+        padding-bottom: 12px;
+    }
+
+    #burger-icon{
+        display: block;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    nav ul li{
+        width: 100%;
+        height: 100%;
+
+    }  
+
+    nav ul li a{
+        color: rgb(255, 255, 255);
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    } 
+
+    .contact-design{
+        background-color: rgba(29, 39, 29, 0.562);
+        cursor: pointer;
+        border-bottom: none;
+    
+    }
+
+    .home-design:active, .fb-design:active, .contact-design:active, .about-design{
+        color: white;
+    }
+
+    nav ul li a::after{
+        display: none;
+    }
+
+}
+
+@media (max-width: 903px){
+    body{
+        overflow: visible;
+        background-position-y: 1px;
+        background-attachment: fixed;
+    }
+    nav{
+        padding: 0;
+        flex-direction: row-reverse;
+        padding: 0 0 0 1rem;
+    }
+
+    .contact-design{
+        background-color: rgba(29, 39, 29, 0.562);
+        cursor: pointer;
+        border-bottom: none;
+    
+    }
+
+    .home-design:active, .fb-design:active, .about-design:active{
+        color: white;
+    }
+
+    nav ul li a::after{
+        display: none;
+    }
+
+    main{
+        height: auto;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    main h1{
+        font-size: clamp(2.5rem, 3vw, 3.2rem);
+        position: static;
+        text-align: center;
+    }
+
+    .structure-card{
+        gap: 2rem;
+    }
+
+    .card{
+        box-shadow: 0 16px 15px black;
+    }
+
+}

@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&family=Prompt:ital,wght@0,600;0,700;1,500;1,600;1,700&display=swap');
+
+*{
+    color: white;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body{
+    background-image: url(../pictures/fb-background2.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 90px;
+    background-size: cover;
+    height: 1050px;
+    background-color: #000000;
+    overflow: hidden;
+    
+}
+
+nav h2{
+    font-family: 'Prompt', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-style: italic;
+    padding: 1px 0 0 0;
+    margin-right: 5rem;
+    color: #ffffff;    
+    font-size: 3rem;
+    position: relative;
+    filter: drop-shadow(5px 5px 3px black);
+}
+
+nav {
+    height: 5.9rem;
+    padding: 0 1.8rem;
+    background-image:  linear-gradient(to bottom right, rgb(46, 56, 52) 30%, rgb(46, 56, 52) 40%, rgb(46, 63, 46) 90%, rgb(44, 71, 44));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    z-index: 1000;    
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+
+nav ul li a{
+    font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 100;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    padding: 2.25rem 2.5rem;
+}
+
+
+nav ul li a::after{
+    content: "";
+    background-color: #387240;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 2.5rem;
+    bottom: 2.25rem;
+    transition: 0.3s;
+}   
+
+
+.about-design:hover, .home-design:hover, .contact-design:hover{
+    transition: 0.1s;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+.about-design:active, .home-design:active, .contact-design:active{
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+
+}
+nav ul li a:active{
+    color:#38693e93;
+}
+
+nav ul li a:hover::after{
+    width: 20%;
+}
+
+#burger-icon, #close-icon{
+    font-size: 3rem;
+    display: none;
+}
+
+.fb-design{
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    border-bottom: 2px solid #45a55a;
+}
+
+.home-design:hover, .about-design:hover, .contact-design:hover{
+    transition: 0.1s;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+.home-design:active, .about-design:active, .contact-design:active{
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+
+}
+
+nav ul li a:active{
+    color:#38693e93;
+}
+
+main{
+    height: 81%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+form .form-container{
+    width: 600px;
+    height: 700px;
+    background-color: rgba(4, 26, 4, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1.5rem;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    border: 2px solid white;
+    position: relative;
+}
+
+form .form-container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+form .form-container h1{
+    font-family: 'Prompt', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-style: italic;
+    color: #ffffff;    
+    font-size: clamp(1.8rem, 1.8vw, 2rem);
+    filter: drop-shadow(0px 2px 2px black);
+    position: absolute;
+    top: -2.5rem;
+}
+
+label[for="name"], label[for="email"], label[for="subject"]{
+    align-self: flex-start;
+}
+
+input{
+    width: 20rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    /* border: solid white 1px;*/
+    /* border-radius: 100px;  */
+    border-bottom: 2px solid white;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    padding: 0;
+    margin-bottom: 1px;
+}
+
+#submit{
+    color: white;
+    width: 15rem;
+    height: 3rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border: solid white 2px;
+    border-radius: 100px;
+    transition: 0.2s;
+}
+
+#submit:hover{
+    border: solid rgb(219, 219, 219) 2px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    
+}
+
+#feedback{
+    color: black;
+    padding: 10px;
+    resize: none;
+    border: solid white;
+    border-radius: 10px;
+    outline: none;
+    
+}
+
+#submit:active{
+    color: rgba(0, 0, 0, 0.253);
+    cursor: pointer;
+}
+
+@media (max-width: 1349px){
+    nav ul{
+        padding: 0;
+    }
+
+    nav h2{
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 1199px){
+    nav{
+        padding: 0;
+        position: sticky;
+        top: 0;
+        flex-direction: row-reverse;
+        padding: 0 0 0 1rem;
+    }
+
+    nav ul{
+        padding: 0;
+        position: absolute;
+        flex-direction: column;
+        top: 5.9rem;
+        background-color:rgb(101, 138, 101);
+        width: 100%;
+        height: 22rem;
+        max-width: 100%;
+        visibility: hidden;
+    }
+
+    nav h2 span{
+        margin: 0;
+    }
+
+    nav h2{
+        margin-left: 20px;
+        font-size: clamp(2rem, 3vw, 3.2rem);
+    }
+
+    main section h1{
+        text-align: center;
+        font-size: 2.7rem;
+        padding-bottom: 12px;
+    }
+
+    #burger-icon{
+        display: block;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    nav ul li{
+        width: 100%;
+        height: 100%;
+
+    }  
+
+    nav ul li a{
+        color: rgb(255, 255, 255);
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    } 
+
+    .fb-design{
+        background-color: rgba(29, 39, 29, 0.562);
+        cursor: pointer;
+        border-bottom: none;
+    
+    }
+
+    .home-design:active, .fb-design:active, .contact-design:active, .about-design{
+        color: white;
+    }
+
+    nav ul li a::after{
+        display: none;
+    }
+
+}
+
+@media (max-width: 767px){
+    body{
+        height: auto;
+        overflow: visible;
+    }
+    nav{
+        padding: 0;
+        position: sticky;
+        top: 0;
+        flex-direction: row-reverse;
+        padding: 0 0 0 1rem;
+        
+    }
+
+    main{
+        
+        padding: 2rem;
+        height: auto;
+        width: 100%;
+    }
+
+    .container{
+        width: 100%;
+        
+    }
+
+    form .form-container{
+        width: 100%;
+        padding: 2rem 2.5rem;
+        gap: 1.5rem;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    form .form-container h1{
+        position: static;
+        text-align: center;
+    }
+
+    #feedback{
+        height: 200px;
+    }
+
+    input{
+        width: 100%;
+    }
+
+    label{
+        font-weight: bold;
+    }
+
+    form .form-container div{
+        width: 100%;
+    }
+
+    textarea{
+        width: 100%;
+    }
+}

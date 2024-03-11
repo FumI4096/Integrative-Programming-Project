@@ -1,5 +1,5 @@
 function redirectToHome() {
-    window.location.href = "../Home_Tab/index.html";
+    window.location.href = "./Home_Tab/index.html";
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -15,7 +15,7 @@ function togglePassword(){
 
     const currentType = passwordInput.type;
 
-    passwordInput.type = currentType === "password" ? "text" : "password"
+    passwordInput.type = currentType === "password" ? "text" : "password";
 }
 
 

@@ -1,4 +1,5 @@
-#Account functions
+#handler forms
+.include
 
-login/*
-register/*
+
+start

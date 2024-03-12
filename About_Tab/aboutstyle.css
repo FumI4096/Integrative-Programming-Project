@@ -241,10 +241,12 @@ nav ul li a:hover::after{
 } 
 
 .Mission-layout{
+    /*change background pic*/
     height: auto;
     background-image: url(../pictures/mission-background.jpg);
     background-position-y: 60rem;
     background-attachment: fixed;
+    /* background-repeat: no-repeat; */
     background-size: cover;
     position: relative;
     display: flex;
@@ -261,7 +263,8 @@ nav ul li a:hover::after{
 .Mission-layout::after{
     content: '';
     inset: 0;
-    background-image: linear-gradient(to bottom right, rgba(19, 26, 21, 0.850) 40%, rgba(19, 26, 21, 0.644) 50%,   rgba(0, 0, 0, 0.397) 55%, rgba(0, 0, 0, 0.8) 60%);
+    /* background-image: linear-gradient(to bottom right, rgba(19, 26, 25, 0.85) 40%, rgba(19, 26, 21, 0.644) 50%,   rgba(0, 0, 0, 0.397) 55%, rgba(0, 0, 0, 0.8) 60%); */
+    background-color: rgba(4, 17, 75, 0.5);
     z-index: -1;
     position: absolute;
 

@@ -96,7 +96,7 @@ nav h2{
 nav {
     height: 5.9rem;
     padding: 0 1.8rem;
-    background-image:  linear-gradient(to bottom right, rgb(46, 56, 52) 30%, rgb(46, 56, 52) 40%, rgb(46, 63, 46) 90%, rgb(44, 71, 44));
+    background-image:  linear-gradient(to right, #B5CDF2, #95AFAE 24%, #3e5c39 36%, #23491D 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -109,6 +109,10 @@ nav {
     width: 100%;
     z-index: 1000;
     transition: top 0.3s;
+}
+
+nav img{
+    height: 80px;
 }
 
 
@@ -150,13 +154,13 @@ nav ul li a::after{
 }   
 
 
-.about-design:hover, .fb-design:hover, .contact-design:hover{
+.about-design:hover, .fb-design:hover, .contact-design:hover, .admin-design:hover, .schedule-design:hover{
     transition: 0.1s;
     background-color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
 
 }
-.about-design:active, .fb-design:active, .contact-design:active{
+.about-design:active, .fb-design:active, .contact-design:active, .admin-design:active, .schedule-design:active{
     background-color: rgba(0, 0, 0, 0.4);
     cursor: pointer;
 

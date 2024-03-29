@@ -539,6 +539,7 @@ footer h1{
         padding: 3rem 1.5rem 2.2rem 1.5rem;
         justify-content: center;
         gap: 3rem;
+        
     }
 
     .about-us-layout section{
@@ -591,6 +592,7 @@ footer h1{
         position: relative;
         flex-direction: row-reverse;
         padding: 0 0 0 1rem;
+        
     }
 
     nav ul{

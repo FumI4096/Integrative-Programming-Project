@@ -1,43 +1,37 @@
-// window.onscroll = function() {myFunction()};
+const openButton = document.getElementById("burger-icon")
+const closeButton = document.getElementById("close-icon")
+const tabs = document.getElementById("opening-nav")
 
-// var nav = document.getElementById("main-nav");
-// var sticky = nav.offsetTop;
-
-// function myFunction() {
-//     if (window.pageYOffset >= sticky) {
-//         nav.classList.add("sticky");
-//         document.body.style.paddingTop = nav.offsetHeight + "px";
-//     } else {
-//         nav.classList.remove("sticky");
-//         document.body.style.paddingTop = 0;
-//     }
-// }
-
-
-const openButton = document.getElementById("burger-icon").addEventListener("click", openNav)
+openButton.addEventListener("click", openNav)
+closeButton.addEventListener("click", closeNav)
 
 function openNav(){
-    let display = document.getElementById("opening-nav").style.visibility = "visible";
-
-    let burger = document.getElementById("burger-icon").style.display = "none";
-
-    let close = document.getElementById("close-icon");
-
-    close.style.display = "block";
-    close.style.marginRight = "20px";
-    close.style.cursor = "pointer";
+    tabs.style.visibility = "visible";
+    openButton.style.display = "none";
+    closeButton.style.display = "block";
     
 }
-
-const closeButton = document.getElementById("close-icon").addEventListener("click", closeNav)
 
 function closeNav(){
-
-    let nav = document.getElementById("opening-nav").style.visibility = "hidden";
-
-    let burger = document.getElementById("burger-icon").style.display = "block";
-
-    let close = document.getElementById("close-icon");
-    
-    close.style.display = "none";
+    tabs.style.visibility = "hidden";
+    openButton.style.display = "block";
+    closeButton.style.display = "none";
 }
+
+window.addEventListener('resize', function() {
+    var width = window.innerWidth;
+    
+    if (width <= 1199) {
+        openButton.style.display = 'block';
+        tabs.style.visibility = "hidden";
+        closeButton.style.display = 'none';
+    } 
+    else {
+        openButton.style.display = 'none';
+        tabs.style.visibility = "visible";
+        closeButton.style.display = 'none';
+        
+    }
+});
+
+window.dispatchEvent(new Event('resize'));

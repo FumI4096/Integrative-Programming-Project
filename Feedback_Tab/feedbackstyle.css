@@ -19,39 +19,40 @@ body{
     
 }
 
-nav h2{
-    font-family: 'Prompt', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 700;
-    font-style: italic;
-    padding: 1px 0 0 0;
-    margin-right: 5rem;
-    color: #ffffff;    
-    font-size: 3rem;
-    position: relative;
-    filter: drop-shadow(5px 5px 3px black);
-}
-
 nav {
     height: 5.9rem;
-    padding: 0 1.8rem;
-    background-image:  linear-gradient(to bottom right, rgb(46, 56, 52) 30%, rgb(46, 56, 52) 40%, rgb(46, 63, 46) 90%, rgb(44, 71, 44));
+    padding: 0 2.5rem;
+    background-color: rgb(46, 56, 52);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;
-    z-index: 1000;    
 }
 
 nav ul {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     list-style-type: none;
+    padding: 0;
 }
 
+nav ul li{
+    height: 100%;
+}
 
-nav ul li a{
+nav img{
+    height: 80%;
+}
+
+#fb-design{
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    border-bottom: 2px solid #45a55a;
+}
+
+.nav-bars{
+    height: 100%;
     font-size: 1rem;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 100;
@@ -59,11 +60,13 @@ nav ul li a{
     text-decoration: none;
     color: #ffffff;
     position: relative;
-    padding: 2.25rem 2.5rem;
+    padding: 0 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-nav ul li a::after{
+.nav-bars::after{
     content: "";
     background-color: #387240;
     position: absolute;
@@ -74,51 +77,30 @@ nav ul li a::after{
     transition: 0.3s;
 }   
 
-
-.about-design:hover, .home-design:hover, .contact-design:hover{
+.nav-bars:not(#fb-design):hover{
     transition: 0.1s;
     background-color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
 
 }
-.about-design:active, .home-design:active, .contact-design:active{
+
+.nav-bars:not(#fb-design):active{
     background-color: rgba(0, 0, 0, 0.4);
+    color:#38693e93;
     cursor: pointer;
 
 }
-nav ul li a:active{
-    color:#38693e93;
-}
 
-nav ul li a:hover::after{
+.nav-bars:not(#fb-design):hover::after{
     width: 20%;
 }
 
 #burger-icon, #close-icon{
+    color: white;
     font-size: 3rem;
     display: none;
-}
-
-.fb-design{
-    background-color: rgba(0, 0, 0, 0.6);
+    margin: 0;
     cursor: pointer;
-    border-bottom: 2px solid #45a55a;
-}
-
-.home-design:hover, .about-design:hover, .contact-design:hover{
-    transition: 0.1s;
-    background-color: rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-
-}
-.home-design:active, .about-design:active, .contact-design:active{
-    background-color: rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-
-}
-
-nav ul li a:active{
-    color:#38693e93;
 }
 
 main{
@@ -220,105 +202,65 @@ input{
     cursor: pointer;
 }
 
-@media (max-width: 1349px){
-    nav ul{
-        padding: 0;
-    }
-
-    nav h2{
-        margin-right: 1rem;
-    }
-}
-
 @media (max-width: 1199px){
     nav{
         padding: 0;
-        position: sticky;
-        top: 0;
+        position: relative;
         flex-direction: row-reverse;
-        padding: 0 0 0 1rem;
+        padding: 0 0 0 2.5rem;
     }
 
     nav ul{
-        padding: 0;
         position: absolute;
         flex-direction: column;
         top: 5.9rem;
         background-color:rgb(101, 138, 101);
         width: 100%;
-        height: 22rem;
-        max-width: 100%;
+        height: auto;
         visibility: hidden;
+        z-index: 100000000000000;
     }
 
-    nav h2 span{
-        margin: 0;
-    }
-
-    nav h2{
-        margin-left: 20px;
-        font-size: clamp(2rem, 3vw, 3.2rem);
-    }
-
-    main section h1{
-        text-align: center;
-        font-size: 2.7rem;
-        padding-bottom: 12px;
+    nav ion-icon{
+        padding-right: 2.5rem;
     }
 
     #burger-icon{
         display: block;
-        margin-right: 20px;
         cursor: pointer;
     }
 
     nav ul li{
         width: 100%;
-        height: 100%;
-
+        height: auto;
     }  
 
-    nav ul li a{
+    .nav-bars{
         color: rgb(255, 255, 255);
-        padding: 0;
         height: 100%;
         width: 100%;
-        font-size: 0.9rem;
+        font-size: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
-
+        padding: 2rem 0;
     } 
 
-    .fb-design{
+    #fb-design{
         background-color: rgba(29, 39, 29, 0.562);
         cursor: pointer;
         border-bottom: none;
-    
-    }
-
-    .home-design:active, .fb-design:active, .contact-design:active, .about-design{
-        color: white;
     }
 
     nav ul li a::after{
         display: none;
     }
-
 }
 
 @media (max-width: 767px){
     body{
         height: auto;
         overflow: visible;
-    }
-    nav{
-        padding: 0;
-        position: sticky;
-        top: 0;
-        flex-direction: row-reverse;
-        padding: 0 0 0 1rem;
-        
     }
 
     main{

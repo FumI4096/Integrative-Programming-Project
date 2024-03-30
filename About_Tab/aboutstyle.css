@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&family=Prompt:ital,wght@0,600;0,700;1,500;1,600;1,700&display=swap');
+:root{  
+    --layout-padding: 2rem;
+}
+
 *{
     box-sizing: border-box;
     font-family: 'Nunito Sans', sans-serif;
@@ -27,7 +31,7 @@ header{
     align-items: center;
     position: relative;
     isolation: isolate;
-    padding: 0 1.8rem;
+    padding: 0 2.5rem;
 }
 
 header::before{
@@ -48,63 +52,18 @@ header #quote-design{
     text-align: center;
 }
 
-/*header::after{
-    content: "";
-    background-color: rgb(255, 255, 255);
-    height: 0.2em;
-    width: 14em;
-    position: absolute;
-    top: 15.6em;
-    bottom: 0;
-    right: 0;
-    left: 29.3em;
-    transform: rotate(90deg);
-
-}*/
-
 header h2{
     margin: 0;
     color: white;
 }
 
 nav {
-    height: 5.9rem; 
-    background-image: linear-gradient(to bottom right, rgb(46, 56, 52) 30%, rgb(46, 56, 52) 40%, rgb(46, 63, 46) 90%, rgb(44, 71, 44));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-#main-nav.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: top 0.3s;
-}
-
-nav h2{
-    font-family: 'Prompt', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 700;
-    font-style: italic;
-    padding: 1px 0 0 0;
-    margin-right: 5rem;
-    color: #ffffff;    
-    font-size: 3rem;
-    position: relative;
-    filter: drop-shadow(5px 5px 3px black);
-}
-
-nav {
     height: 5.9rem;
-    padding: 0 1.8rem;
-    background-image:  linear-gradient(to bottom right, rgb(46, 56, 52) 30%, rgb(46, 56, 52) 40%, rgb(46, 63, 46) 90%, rgb(44, 71, 44));
+    padding: 0 2.5rem;
+    background-color: rgb(46, 56, 52);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;
 }
 
 #main-nav.sticky {
@@ -115,22 +74,31 @@ nav {
     transition: top 0.3s;
 }
 
-
 nav ul {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     list-style-type: none;
+    padding: 0;
 }
 
-.about-design{
+nav ul li{
+    height: 100%;
+}
+
+nav img{
+    height: 80%;
+}
+
+#about-design{
     background-color: rgba(0, 0, 0, 0.6);
     cursor: pointer;
     border-bottom: 2px solid #45a55a;
 }
 
-
-nav ul li a{
+.nav-bars{
+    height: 100%;
     font-size: 1rem;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 100;
@@ -138,11 +106,13 @@ nav ul li a{
     text-decoration: none;
     color: #ffffff;
     position: relative;
-    padding: 2.25rem 2.5rem;
+    padding: 0 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-nav ul li a::after{
+.nav-bars::after{
     content: "";
     background-color: #387240;
     position: absolute;
@@ -153,29 +123,29 @@ nav ul li a::after{
     transition: 0.3s;
 }   
 
-
-.home-design:hover, .fb-design:hover, .contact-design:hover{
+.nav-bars:not(#about-design):hover{
     transition: 0.1s;
     background-color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
 
 }
-.home-design:active, .fb-design:active, .contact-design:active{
+
+.nav-bars:not(#about-design):active{
     background-color: rgba(0, 0, 0, 0.4);
+    color:#38693e93;
     cursor: pointer;
 
 }
-nav ul li a:active{
-    color:#38693e93;
-}
 
-nav ul li a:hover::after{
+.nav-bars:not(#about-design):hover::after{
     width: 20%;
 }
 
 #burger-icon, #close-icon{
     font-size: 3rem;
     display: none;
+    margin: 0;
+    cursor: pointer;
 }
 
 /*IMPORTANT*/
@@ -205,18 +175,9 @@ nav ul li a:hover::after{
 }
 /*END OF IMPORTANT*/
 
-.Fitflow-layout h1{
-    font-family: 'Prompt', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 700;
-    font-style: italic;
-    margin: 0;
-    top: 2.8rem;
-    background-color: rgb(224, 224, 224);
-    color: #000;
-    padding: 0 0.8rem;
-    font-size: 3.2rem;
-    z-index: 1;
+.Fitflow-layout img{
+    height: 115px;
+    filter: invert(100%) drop-shadow(0px 0px 10px rgb(255, 255, 255));
 }
 
 .Fitflow-layout hr{
@@ -263,8 +224,7 @@ nav ul li a:hover::after{
 .Mission-layout::after{
     content: '';
     inset: 0;
-    /* background-image: linear-gradient(to bottom right, rgba(19, 26, 25, 0.85) 40%, rgba(19, 26, 21, 0.644) 50%,   rgba(0, 0, 0, 0.397) 55%, rgba(0, 0, 0, 0.8) 60%); */
-    background-color: rgba(4, 17, 75, 0.5);
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.6),  rgb(189, 189, 189) 90%);
     z-index: -1;
     position: absolute;
 
@@ -477,21 +437,14 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 280px;
+    height: auto;
     gap: 4rem;
     background-image: linear-gradient(to bottom right, black, #17120D);
+    padding: var(--layout-padding);
 }
 
-footer h1{
-    margin: 0;
-    font-family: 'Prompt', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 700;
-    font-style: italic;
-    color: #ffffff;    
-    padding: 4px 0;
-    font-size: 2.2rem;
-    filter: drop-shadow(5px 5px 3px black);
+footer img{
+    height: 90px;
 
 }
 
@@ -501,17 +454,11 @@ footer h1{
     justify-content: center;
     align-items: center;
     padding: 0;
-}
-
-.icons ul li{
-    padding: 0 2.5rem;
-    font-size: 2.2rem;
-    height: 35px;
+    gap: 5rem;
 }
 
 .icons ul li a{
-    display: block;
-    height: inherit;
+    font-size: 2.3rem;
 }
 .icons a ion-icon:hover{
     color: rgb(187, 187, 187);
@@ -521,16 +468,6 @@ footer h1{
 }
 .developer p{
     font-size: 0.9rem;
-}
-
-@media (max-width: 1349px){
-    nav ul{
-        padding: 0;
-    }
-
-    nav h2{
-        margin-right: 1rem;
-    }
 }
 
 @media (max-width: 1226px){
@@ -546,7 +483,6 @@ footer h1{
         height: auto;
         flex-direction: column;
         padding: 2rem 2rem;
-
     }
 
     .about-us-layout #image-container{
@@ -591,81 +527,58 @@ footer h1{
         padding: 0;
         position: relative;
         flex-direction: row-reverse;
-        padding: 0 0 0 1rem;
-        
+        padding: 0 0 0 2.5rem;
     }
 
     nav ul{
-        padding: 0;
         position: absolute;
         flex-direction: column;
         top: 5.9rem;
         background-color:rgb(101, 138, 101);
         width: 100%;
-        height: 22rem;
-        max-width: 100%;
+        height: auto;
         visibility: hidden;
     }
 
-    nav h2 span{
-        margin: 0;
-    }
-
-    nav h2{
-        margin-left: 20px;
-        font-size: clamp(2rem, 3vw, 3.2rem);
-    }
-
-    main section h1{
-        text-align: center;
-        font-size: 2.7rem;
-        padding-bottom: 12px;
+    nav ion-icon{
+        padding-right: 2.5rem;
     }
 
     #burger-icon{
         display: block;
-        margin-right: 20px;
         cursor: pointer;
     }
 
     nav ul li{
         width: 100%;
-        height: 100%;
-
+        height: auto;
     }  
 
-    nav ul li a{
+    .nav-bars{
         color: rgb(255, 255, 255);
-        padding: 0;
         height: 100%;
         width: 100%;
-        font-size: 0.9rem;
+        font-size: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
-
+        padding: 2rem 0;
     } 
 
-    .about-design{
+    #about-design{
         background-color: rgba(29, 39, 29, 0.562);
         cursor: pointer;
         border-bottom: none;
-    
-    }
-
-    .home-design:active, .fb-design:active, .contact-design:active, .about-design{
-        color: white;
     }
 
     nav ul li a::after{
         display: none;
     }
-
 }
 
 @media (max-width: 767px){
-    nav{
-        padding: 0;
+    .Fitflow-layout img{
+        height: 90px;
     }
 
     header{
@@ -677,7 +590,6 @@ footer h1{
         font-size: 2.1rem;
     }
 
-    
     .Fitflow-layout{
         height: auto;
         gap: 2rem;
@@ -685,17 +597,12 @@ footer h1{
         justify-content: center;
     }
 
-    
     .Fitflow-layout h1{
         position: static;
         transform: none;
         font-size: clamp(2.2rem, 7vw, 4rem);
         
     }
-/* 
-    .Fitflow-layout hr{
-        display: none;
-    } */
 
     .Fitflow-layout section{
         padding: 0 1.5rem 1.5rem 1.5rem;
@@ -706,7 +613,6 @@ footer h1{
         text-indent: 50px;
         text-shadow: 4px 4px 5px #000;
         justify-content: start;
-        
     }
 
     .about-us-layout #image-container img{
@@ -751,13 +657,8 @@ footer h1{
     }
 
     footer{
-        height: 200px;
-        max-width: 100%;
-        gap: 2rem;
-    }
-
-    footer h1{
-        padding: 0;
+        height: auto;
+        gap: 3rem;
     }
 
     .developer p{
@@ -782,8 +683,5 @@ footer h1{
         overflow-y: scroll;
         padding: 0.6rem 1.2rem;
     }
-    
-    
-    
 }
 

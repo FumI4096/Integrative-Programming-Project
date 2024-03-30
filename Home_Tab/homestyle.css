@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&family=Prompt:ital,wght@0,600;0,700;1,500;1,600;1,700&display=swap');
 :root{
     --height: 800px;
+    --nav-padding: 0 2rem;
+    --layout-padding: 2rem;
 }
 
 *{
@@ -15,6 +17,7 @@
 html{
     height: 1300px;
 }
+
 body{
     height: inherit;
     background-color: #c6cabe;
@@ -83,12 +86,11 @@ header .quote .line1{
 
 nav {
     height: 5.9rem;
-    padding: 0 1.8rem;
-    background-image:  linear-gradient(to right, #B5CDF2, #95AFAE 24%, #3e5c39 30%, #23491D 100%);
+    padding: var(--nav-padding);
+    background-image:  linear-gradient(to right, #ffffff, #ffffff 18%, #3e5c39 30%, #23491D 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;
 }
 
 #main-nav.sticky {
@@ -103,25 +105,20 @@ nav img{
     height: 80px;
 }
 
-
 nav ul {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     list-style-type: none;
-}
-
-.home-design{
-    background-color: rgba(0, 0, 0, 0.6);
-    cursor: pointer;
-    border-bottom: 2px solid #45a55a;
+    padding: 0;
 }
 
 nav ul li{
     height: 100%;
 }
-nav ul li a{
+
+.nav-bars{
     height: 100%;
     font-size: 1rem;
     font-family: 'Nunito Sans', sans-serif;
@@ -136,7 +133,7 @@ nav ul li a{
     align-items: center;
 }
 
-nav ul li a::after{
+.nav-bars::after{
     content: "";
     background-color: #387240;
     position: absolute;
@@ -147,33 +144,37 @@ nav ul li a::after{
     transition: 0.3s;
 }   
 
-.about-design:hover, .fb-design:hover, .contact-design:hover, .admin-design:hover, .schedule-design:hover{
+.nav-bars:not(#home-design):hover{
     transition: 0.1s;
     background-color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
 
 }
-.about-design:active, .fb-design:active, .contact-design:active, .admin-design:active, .schedule-design:active{
+
+.nav-bars:not(#home-design):active{
     background-color: rgba(0, 0, 0, 0.4);
+    color:#38693e93;
     cursor: pointer;
 
 }
-nav ul li a:active{
-    color:#38693e93;
+
+#home-design{
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid rgb(14, 153, 60);
 }
 
-nav ul li a:hover::after{
+.nav-bars:not(#home-design):hover::after{
     width: 20%;
 }
 
 #burger-icon, #close-icon{
     font-size: 3rem;
     display: none;
+    margin: 0;
 }
 
-
 main{
-    height: 900px;
+    height: auto;
     background-image: linear-gradient(to bottom right, rgb(206, 206, 206) 20%, rgb(25, 41, 18) 25%, rgb(45, 104, 45) 43%, rgb(24, 24, 24) 20%);
     padding: 2rem;
     display: flex;
@@ -214,9 +215,7 @@ main section h1{
     column-gap: 0.3rem;
     padding: 40px;
     box-shadow: 0px 0px 10px #00000060;
-    
 }
-
 
 .image-container{
     height: 170px;
@@ -231,7 +230,7 @@ main section h1{
 }
 
 .card p{
-    color: rgb(197, 245, 197);
+    color: white;
 }
 
 .image{
@@ -266,21 +265,22 @@ main section h1{
     justify-content: center;
     align-items: center;
     height: 70px;
-    width: 120px;
+    width: 140px;
     background-color: #ffffff;
     color:#000000;
-    border-radius: 12px;
+    border-radius: 9px;
     align-self: flex-end;
     font-weight: bold;
-    box-shadow: 4px 4px 0px rgb(153, 153, 153);
     cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.read-more:hover{
+    background-color: #d8d8d8;
 }
 
 .read-more:active{
-    position: relative;
-    top: 4px;
-    left: 4px;
-    box-shadow: none;
+    background-color: #aaaaaa;
 }
 
 .box{
@@ -297,7 +297,6 @@ main section h1{
     align-items: center;
     z-index: 10000000;
     border: none;
-
 }
 
 .box .modal-container{
@@ -363,7 +362,6 @@ main section h1{
     font-weight: bold;
     font-size: 1rem;
     background-color: #ffffff;
-    box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.568);
 }
 
 .close-button:hover{
@@ -371,12 +369,8 @@ main section h1{
 }
 
 .close-button:active{
-    background-color: #f0f0f0;
-    box-shadow: none;
-    position: relative;
-    top: 6px;
+    background-color: #d1d1d1;
 }
-
 
 .italic{
     font-style: italic;
@@ -455,20 +449,14 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 280px;
+    height: auto;
     gap: 4rem;
     background-image: linear-gradient(to bottom right, black, #17120D);
+    padding: var(--layout-padding);
 }
 
-footer h1{
-    font-family: 'Prompt', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 700;
-    font-style: italic;
-    color: #ffffff;    
-    padding: 4px 0;
-    font-size: 2.2rem;
-    filter: drop-shadow(5px 5px 3px black);
+footer img{
+    height: 90px;
 
 }
 
@@ -478,17 +466,11 @@ footer h1{
     justify-content: center;
     align-items: center;
     padding: 0;
-}
-
-.icons ul li{
-    padding: 0 2.5rem;
-    font-size: 2.2rem;
-    height: 35px;
+    gap: 5rem;
 }
 
 .icons ul li a{
-    display: block;
-    height: inherit;
+    font-size: 2.3rem;
 }
 .icons a ion-icon:hover{
     color: rgb(187, 187, 187);
@@ -502,7 +484,6 @@ footer h1{
 
 @media (max-width: 1879px){
     main{
-        height: auto;
         gap: 1.5rem;
     }
 
@@ -541,23 +522,13 @@ footer h1{
     }
 }
 
-@media (max-width: 1739px){
-    nav ul li a {
-        padding: 0 2.1rem;
-        font-size: 0.9rem;
-    }
-    nav ul li a::after{
-        left: 2.29rem;
-    }   
-}
-
 @media (max-width: 1500px){
     nav ul li a {
-        padding: 0 2.05rem;
-        font-size: 0.85rem;
+        padding: 0 2.15rem;
+        font-size: 0.87rem;
     }
     nav ul li a::after{
-        left: 2.05rem;
+        left: 2.1rem;
     }   
 }
 
@@ -574,7 +545,7 @@ footer h1{
     }
 
     header .quote{
-        text-shadow: 10px 10px 8px black;
+        text-shadow: 5px 0 8px black;
         margin: 0;
     }
 
@@ -583,43 +554,65 @@ footer h1{
     }
 }
 
-@media (max-width: 1349px){
-    nav ul{
-        padding: 0;
-    }
-
-    nav h2{
-        margin-right: 1rem;
-    }
-}
-
 @media (max-width: 1199px){
     nav{
-        padding: 0;
+        background-image: linear-gradient(to right, #ffffff 24%, #3e5c39 50%, #325f2a 60%, #23491D 100%);
         position: relative;
         flex-direction: row-reverse;
-        padding: 0 0 0 1rem;
+        padding: 0;
     }
 
     nav ul{
-        padding: 0;
         position: absolute;
         flex-direction: column;
         top: 5.9rem;
         background-color:rgb(101, 138, 101);
         width: 100%;
-        height: 22rem;
-        max-width: 100%;
+        height: auto;
         visibility: hidden;
     }
 
-    nav h2 span{
-        margin: 0;
+    nav ion-icon{
+        padding-right: 2rem;
     }
 
-    nav h2{
-        margin-left: 20px;
-        font-size: clamp(2rem, 3vw, 3.2rem);
+    nav img{
+        padding-left: 2rem;
+    }
+
+    #burger-icon{
+        display: block;
+        cursor: pointer;
+    }
+
+    nav ul li{
+        width: 100%;
+        height: auto;
+    }  
+
+    .nav-bars{
+        color: rgb(255, 255, 255);
+        height: 100%;
+        width: 100%;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0;
+    } 
+
+    .nav-bars::after{
+        display: none;
+    }
+
+    #home-design{
+        background-color: rgba(29, 39, 29, 0.562);
+        cursor: pointer;
+        border-bottom: none;
+    }
+
+    .nav-bars:not(#home-design):active{
+        color: white;
     }
 
     main section h1{
@@ -627,54 +620,11 @@ footer h1{
         font-size: 2.7rem;
         padding-bottom: 12px;
     }
-
-    #burger-icon{
-        display: block;
-        margin-right: 20px;
-        cursor: pointer;
-    }
-
-    nav ul li{
-        width: 100%;
-        height: 100%;
-
-    }  
-
-    nav ul li a{
-        color: rgb(255, 255, 255);
-        padding: 0;
-        height: 100%;
-        width: 100%;
-        font-size: 0.9rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    } 
-
-    .home-design{
-        background-color: rgba(29, 39, 29, 0.562);
-        cursor: pointer;
-        border-bottom: none;
-    
-    }
-
-    .about-design:active, .fb-design:active, .contact-design:active, .home-design:active{
-        color: white;
-    }
-
-    nav ul li a::after{
-        display: none;
-    }
-
 }
 
 @media (max-width: 767px){
-    nav{
-        padding: 0;
-        position: relative;
-        flex-direction: row-reverse;
-        padding: 0 0 0 1rem;
+    nav img{
+        height: 65%;
     }
 
     header{
@@ -705,7 +655,6 @@ footer h1{
         max-width: 100%;
     }
 
-
     main section{
         max-width: 100%;
         padding: 0 20px 10px 30px;
@@ -730,8 +679,6 @@ footer h1{
         width: 100%;
     }
 
-    .struct
-
     aside h1{
         font-size: 2rem;
     }
@@ -739,17 +686,11 @@ footer h1{
         padding: 15px 20px;
         margin: 0;
         row-gap: 2.5rem;
-        
     }
 
     footer{
-        height: 200px;
-        max-width: 100%;
-        gap: 2rem;
-    }
-
-    footer h1{
-        padding: 0;
+        height: auto;
+        gap: 3rem;
     }
 
     .developer p{
@@ -771,10 +712,15 @@ footer h1{
 }
 
 @media (max-width: 490px){
+    nav{
+        background-image: linear-gradient(to right, #ffffff 33%, #3e5c39 54%, #325f2a 60%, #23491D 100%);
+    }
+
     main{
         padding: 1rem;
         gap: 1rem;
     }
+
     .layout{
         padding: 0;
         margin: 0;
@@ -786,9 +732,11 @@ footer h1{
         padding-bottom: 30px;
         border: none;
     }
+
     main aside{
         padding: 20px 1.2rem 40px 1.2rem;
     }
+
     main section{
         width: auto;
         padding: 0 20px 10px 20px;    
@@ -796,13 +744,7 @@ footer h1{
     }
 
     footer{
-        height: 200px;
-        max-width: 100%;
         gap: 2rem;
-    }
-
-    footer h1{
-        padding: 0;
     }
 
     .developer p{
@@ -827,8 +769,3 @@ footer h1{
         height: 11%;
     }
 }
-
-
-
-
-

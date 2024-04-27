@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&family=Prompt:ital,wght@0,600;0,700;1,500;1,600;1,700&display=swap');
+
+:root{
+    --layout-padding: 2rem;
+    --green-background1: rgb(46, 56, 52);
+    --green-background2: rgb(52, 77, 66);
+}
+
+*{
+    font-family: 'Nunito Sans', sans-serif;
+    color: #fff;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+nav {
+    height: 5.9rem;
+    padding: 0 2.5rem;
+    background-color: var(--green-background1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li{
+    height: 100%;
+}
+
+nav img{
+    height: 80%;
+}
+
+#schedule-design{
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    border-bottom: 2px solid #45a55a;
+}
+
+.nav-bars{
+    height: 100%;
+    font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 100;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    padding: 0 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bars::after{
+    content: "";
+    background-color: #387240;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 2.5rem;
+    bottom: 2.25rem;
+    transition: 0.3s;
+}   
+
+.nav-bars:not(#schedule-design):hover{
+    transition: 0.1s;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+
+.nav-bars:not(#schedule-design):active{
+    background-color: rgba(0, 0, 0, 0.4);
+    color:#38693e93;
+    cursor: pointer;
+
+}
+
+.nav-bars:not(#schedule-design):hover::after{
+    width: 20%;
+}
+
+#burger-icon, #close-icon{
+    font-size: 3rem;
+    display: none;
+    margin: 0;
+    cursor: pointer;
+}
+
+main{
+    padding: 2.5rem;
+    background-color: rgb(25, 31, 28);
+}
+
+main h2{
+    text-align: center;
+    margin-bottom: 1.2rem;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+.schedule-form, #ui-box{
+    height: 400px;
+    width: 350px;
+    border-radius: 20px;
+
+}
+
+#ui-box{
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+}
+
+.schedule-form{
+    background-image: url('../pictures/schedule-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -2rem 0;
+    padding: var(--layout-padding);
+    box-shadow: 0 21px 14px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border: 7px solid black;
+    isolation: isolate;
+    position: relative;
+
+}
+
+.schedule-form::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to bottom, white 70%, rgb(24, 24, 24) 80%, black 100%);
+    border-radius: 18px;
+    opacity: 0.1;
+}
+
+.number-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 70px;
+    background-color: black;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    border-radius: 0 0 14px 0;
+}
+
+.button-container{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    border-radius: 16px;
+    z-index: 3;
+}
+
+.button-container > *{
+    border-radius: 50px;
+    border: 3px solid black;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 0.94rem;
+    height: 50px;
+    width: 100%;
+    box-shadow: 0 8px 0 black;
+    cursor: pointer;
+
+}
+
+.button-container > *:active{
+    position: relative;
+    top: 8px;
+    box-shadow: none;
+}
+
+.edit-button{
+    background-color: #387240;
+}
+
+.del-button{
+    background-color: rgb(180, 180, 180);
+    color: black;
+}
+
+.edit-button:hover{
+    background-color: #326639;
+}
+
+.del-button:hover{
+    background-color: rgb(167, 167, 167);
+}
+
+#ui-box::after{
+    position: absolute;
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    background-color: #000000;
+    opacity: 0;
+    z-index: 4;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+#ui-box:hover::after{
+    opacity: 0.15;
+
+}
+
+#ui-box ion-icon{
+    font-size: 4rem;
+}
+
+section{
+    height: auto;
+    width: 100%;
+    background-color: var(--green-background2);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    justify-items: center;
+    gap: 5rem 0;
+    padding: 5rem 3rem;
+
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    gap: 4rem;
+    background-image: linear-gradient(to bottom right, black, #17120D);
+    padding: var(--layout-padding);
+}
+
+footer img{
+    height: 90px;
+
+}
+
+.icons ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 5rem;
+}
+
+.icons ul li a{
+    font-size: 2.3rem;
+}
+.icons a ion-icon:hover{
+    color: rgb(187, 187, 187);
+}
+.icons a ion-icon:active{
+    color: rgb(165, 165, 165);
+}
+.developer p{
+    font-size: 0.9rem;
+    color: white;
+}
+
+#references{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.35rem;
+}
+
+#references > ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+#references ul > li{
+    text-align: center;
+    
+}
+
+#references ul li > a{
+    color: rgb(170, 170, 170);
+}
+
+#references ul li > a:hover{
+    background: white;
+    padding: 0.7rem 1.2rem;
+    color: black;
+    border-radius: 20px;
+}

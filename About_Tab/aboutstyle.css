@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&family=Prompt:ital,wght@0,600;0,700;1,500;1,600;1,700&display=swap');
+
 :root{  
     --layout-padding: 2rem;
 }
@@ -469,6 +470,44 @@ footer img{
 .developer p{
     font-size: 0.9rem;
 }
+
+#references{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.35rem;
+}
+
+#references > ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+#references ul > li{
+    text-align: center;
+    
+}
+
+#references ul li > a{
+    color: rgb(170, 170, 170);
+}
+
+#references ul li > a:hover{
+    background: white;
+    padding: 0.7rem 1.2rem;
+    color: black;
+    border-radius: 20px;
+}
+
 
 @media (max-width: 1226px){
     .about-us-layout{

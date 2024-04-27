@@ -482,6 +482,43 @@ footer img{
     font-size: 0.9rem;
 }
 
+#references{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.35rem;
+}
+
+#references > ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+#references ul > li{
+    text-align: center;
+    
+}
+
+#references ul li > a{
+    color: rgb(170, 170, 170);
+}
+
+#references ul li > a:hover{
+    background: white;
+    padding: 0.7rem 1.2rem;
+    color: black;
+    border-radius: 20px;
+}
+
 @media (max-width: 1879px){
     main{
         gap: 1.5rem;
